@@ -1,0 +1,153 @@
+*{
+	font-family: "Roboto", sans-serif;
+	box-sizing: border-box;
+	font-weight: 300;
+}
+
+body{
+	padding: 50px;
+}
+
+#start{
+	display: block;
+	border: none;
+	margin-top: 15px;
+	
+	background: #FF5F6D;
+	background: -webkit-linear-gradient(to right, #FFC371, #FF5F6D);
+	background: linear-gradient(to right, #FFC371, #FF5F6D);
+	
+	border-radius: 10px;
+	padding: 20px;
+	color: white;
+	outline: none;
+	width: 100%;
+	font-size: 20px;
+	text-transform: uppercase;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+#start::hover{
+	opacity: .9;
+}
+
+#stop{
+	display: block;
+	border: none;
+	margin-top: 15px;
+	
+	background: #FF5F6D;
+	background: -webkit-linear-gradient(to right, #FFC371, #FF5F6D);
+	background: linear-gradient(to right, #FFC371, #FF5F6D);
+	
+	border-radius: 10px;
+	padding: 20px;
+	color: white;
+	outline: none;
+	width: 100%;
+	font-size: 20px;
+	text-transform: uppercase;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+#stop::hover{
+	opacity: .9;
+}
+
+#location {
+	display: block;
+	border: none;
+	margin-top: 30px;
+	background: rgba(255, 255, 255, .5);
+	border-radius: 10px;
+	padding: 20px;
+	color: white;
+	outline: none;
+	width: 100%;
+	font-size: 20px;
+}
+
+#location::placeholder {
+	color: rgba(255, 255, 255, .5);
+}
+
+#password {
+	display: block;
+	border: none;
+	margin-top: 15px;
+	background: rgba(255, 255, 255, .5);
+	border-radius: 10px;
+	padding: 20px;
+	color: white;
+	outline: none;
+	width: 100%;
+	font-size: 20px;
+}
+
+#password::placeholder {
+	color: rgba(255, 255, 255, .5);
+}
+
+#TO {
+	display: block;
+	border: none;
+	margin-top: 15px;
+	background: rgba(255, 255, 255, .5);
+	border-radius: 10px;
+	padding: 20px;
+	color: white;
+	outline: none;
+	width: 100%;
+	font-size: 20px;
+}
+
+#TO::placeholder {
+	color: rgba(255, 255, 255, .5);
+}
+
+#sending{
+	display: block;
+	border: none;
+	margin-top: 15px;
+	
+	background: #FF5F6D;
+	background: -webkit-linear-gradient(to right, #FFC371, #FF5F6D);
+	background: linear-gradient(to right, #FFC371, #FF5F6D);
+	
+	border-radius: 10px;
+	padding: 20px;
+	color: white;
+	outline: none;
+	width: 100%;
+	font-size: 20px;
+	text-transform: uppercase;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+#sending::hover{
+	opacity: .9;
+}
+
+#block{
+	display: block;
+	border: none;
+	margin-top: 50px;
+	
+	border-radius: 10px;
+	padding: 15px;
+	color: white;
+	outline: none;
+	width: 185px;
+	font-size: 15.5px;
+	text-transform: uppercase;
+	font-weight: bold;
+	cursor: pointer;
+	opacity: 0.6;
+}
+d
+#block::hover{
+	opacity: 0.9;
+}
