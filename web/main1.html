@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>J.A.R.V.I.S</title>
+	
+	<script src="eel.js"></script>
+	<link rel="icon" type="image/png" href="/voice.png">
+	
+	<link rel="stylesheet" href="main.css">
+	<link href="https://fonts.googleapis.com/
+	css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+	<button id="start">Запустить</button>
+	
+	<button id="stop">Завершить</button>
+	
+	<input id='location' type='text' placeholder="Введите вашу почту" required=''>
+	
+	<div class='info'>
+	
+	</div>
+	
+	<input id='password' type='text' placeholder="Введите пароль" required=''>
+	
+	<div class='info'>
+	
+	</div>
+	
+	<input id='TO' type='text' placeholder="Введите почту получателя" required=''>
+	
+	<div class='info'>
+	
+	</div>
+	
+	<button id='sending'>Отправить</button>
+	
+	<div id='send-mail'></div>
+	
+	<output id='output' name="result">0</output>
+	
+	<button id="block" style="background-color: #000">Изменить цвет</button>
+	
+	<div id="info" style="background-color: rgb(255, 255, 255)"></div>
+	
+	<script src="https://cdnjs.cloudflare.com/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		let start = document.querySelector("#start");
+		start.addEventListener("click", sendData1);
+		
+		async function sendData1(){
+			await eel.call_in_js("0");
+		}
+	
+		let stop = document.querySelector("#stop");
+		stop.addEventListener("click", sendData2);
+		
+		async function sendData2(){
+			await eel.last_stop("1");
+			window.close();
+		}
+		
+		let body = document.querySelector("#info");
+		
+		let block = document.querySelector("#block");
+		block.addEventListener("click", changeColor);
+
+		const hex = [
+			"0",
+			"1",
+			"2",
+			"3",
+			"4",
+			"5",
+			"6",
+			"7",
+			"8",
+			"9",
+			"A",
+			"B",
+			"C",
+			"D",
+			"E",
+			"F",
+		];
+
+		function getRandomNumber() {
+			return Math.floor(Math.random() * hex.length);
+		}
+
+		function generateHex() {
+			let hexColor = "#";
+			for (let i = 0; i < 6; i++) {
+				hexColor += hex[getRandomNumber()];
+			}
+			return hexColor;
+		}
+
+		function changeColor(){
+			let hexColor = generateHex();
+			document.body.style.backgroundColor = hexColor
+		}
+		
+		async function mail(){
+			let login = document.getElementById('location').value;
+			let passwords = document.getElementById('password').value;
+			let TO = document.getElementById('TO').value;
+			let res = await eel.send(login, passwords, TO)();
+			document.getElementById('send-mail').innerHTML = res;
+		}
+		
+		sending.addEventListener("click", mail);
+	</script>
+</body>
+
+</html>
+</html>
